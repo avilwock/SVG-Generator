@@ -52,13 +52,13 @@ function generateSVG(answers) {
     if (answers && answers.shape) {
     switch (answers.shape.toLowerCase()) {
         case 'circle':
-            svgContent = new Circle(answers['background-color']).render();
+            svgContent = new Circle(answers['background-color'], answers['characters'], ['font-color']).render();
             break;
         case 'square':
-            svgContent = new Square(answers['background-color']).render();
+            svgContent = new Square(answers['background-color'], answers['characters'],['font-color']).render();
             break;
         case 'triangle':
-            svgContent = new Triangle(answers['background-color']).render();
+            svgContent = new Triangle(answers['background-color'], answers['characters'], ['font-color']).render();
             break;
         default:
             console.error('Invalid shape selection');
