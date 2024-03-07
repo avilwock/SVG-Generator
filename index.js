@@ -50,19 +50,21 @@ function generateSVG(answers) {
     let svgContent = '';
 
     if (answers && answers.shape) {
-    switch (answers.shape.toLowerCase()) {
-        case 'circle':
-            svgContent = new Circle(answers['background-color'], answers['characters'], answers['font-color']).render();
-            break;
-        case 'square':
-            svgContent = new Square(answers['background-color'], answers['characters'], answers['font-color']).render();
-            break;
-        case 'triangle':
-            svgContent = new Triangle(answers['background-color'], answers['characters'], answers['font-color']).render();
-            break;
-        default:
-            console.error('Invalid shape selection');
-            break;
+        const upperCase = answers['characters'].toUpperCase();
+
+        switch (answers.shape.toLowerCase()) {
+            case 'circle':
+                svgContent = new Circle(answers['background-color'], upperCase, answers['font-color']).render();
+                break;
+            case 'square':
+                svgContent = new Square(answers['background-color'], upperCase, answers['font-color']).render();
+                break;
+            case 'triangle':
+                svgContent = new Triangle(answers['background-color'], upperCase, answers['font-color']).render();
+                break;
+            default:
+                console.error('Invalid shape selection');
+                break;
     }
 
     console.log('Color:', answers['background-color'])
@@ -83,6 +85,7 @@ async function init() {
     console.log('Answers:', answers);
 
     const svgLogoContent = generateSVG(answers);
+    console.log('Font Color:', answers['font-color']);
     console.log('SVG Logo Content: ', svgLogoContent);
 
     fs.writeFile('Logo.svg', svgLogoContent, (err) =>
