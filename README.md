@@ -45,7 +45,7 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 To access this site, please visit: https://github.com/avilwock/SVG-Generator.git
 
-## Usage
+## Set Up and Usage
 
 To use this program, you open up the integrated terminal and type in node index.js to start the generator. You will be prompted with questions about how you wish the logo to look. When you have answered the questions, a logo is generated in a separate SVG file.
 
