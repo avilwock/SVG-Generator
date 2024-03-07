@@ -86,7 +86,7 @@ async function init() {
     console.log('SVG Logo Content: ', svgLogoContent);
 
     fs.writeFile('Logo.svg', svgLogoContent, (err) =>
-    err ? console.log(err): console.log('Success')
+    err ? console.log(err): console.log('Generated logo.svg')
     );
 
 }
