@@ -49,6 +49,8 @@ To access this site, please visit: https://github.com/avilwock/SVG-Generator.git
 
 To use this program, you open up the integrated terminal and type in node index.js to start the generator. You will be prompted with questions about how you wish the logo to look. When you have answered the questions, a logo is generated in a separate SVG file.
 
+https://drive.google.com/file/d/1mdJ6D8dcyrC2n8khy2-uyUgJqqByu-ir/view
+
 ## Credits
 
 With thanks to:
